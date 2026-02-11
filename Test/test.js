@@ -1,90 +1,148 @@
 
 // 1) შექმენით ფუნქცია Sum, რომელიც არგუმენტად მიიღებს ორ რიცხვს და დააბრუნებს მათ ჯამს. ფუნქციას გაუწერეთ Default არგუმენტები. პასუხი დააბრუნეთ return-ით.
 
-function Sum(num1=1, num2=1){
-    return num1 + num2 
-}
+// function Sum(num1=1, num2=1){
+//     return num1 + num2 
+// }
 
-console.log(Sum(2, 7))
+// console.log(Sum(2, 7))
 
 // 2) შექმენით ფუნქცია Substract, რომელიც არგუმენტად მიიღებს ორ რიცხვს და დააბრუნებს მათ სხვაობას. ფუნქციას გაუწერეთ Default არგუმენტები. პასუხი დააბრუნეთ return-ით.
 
-function Substract(num2=2, num3=1){
-    return num2 - num3 
-}
-console.log(Substract(2, 7))
+// function Substract(num2=2, num3=1){
+//     return num2 - num3 
+// }
+// console.log(Substract(2, 7))
 
 
 
 // 3) შექმენით ფუნქცია Multiply, რომელიც არგუმენტად მიიღებს ორ რიცხვს და დააბრუნებს მათ ნამრავლს. ფუნქციას გაუწერეთ Default არგუმენტები. პასუხი დააბრუნეთ return-ით.
 
-function Multiply(num4=4, num5=2){
-    return num4 * num5 
-}
-console.log(Multiply(9, 9))
+// function Multiply(num4=4, num5=2){
+//     return num4 * num5 
+// }
+// console.log(Multiply(9, 9))
 
 
 
 // 4) შექმენით ფუნქცია Divide, რომელიც არგუმენტად მიიღებს ორ რიცხვს და დააბრუნებს მათ განაყოფს. ფუნქციას გაუწერეთ Default არგუმენტები. პასუხი დააბრუნეთ return-ით.
 
-function Divide(num6=2, num7=2){
-    return num6 / num7 
-}
-console.log(Divide(100, 10))
+// function Divide(num6=2, num7=2){
+//     return num6 / num7 
+// }
+// console.log(Divide(100, 10))
 
 // 5) შექმენით ფუნქცია, რომელიც მიიღებს ერთ რიცხვს და შეამოწმებს, არის თუ არა ის კენტი თუ ლუწი,შედეგი დაბეჭდეთ ეკრანზე
 
-function evenOrOdd(num=1){
-    if(num % 2 === 0){
-        return "Even"
-    }else{
-        return "Odd"
-    }
-}
+// function evenOrOdd(num=1){
+//     if(num % 2 === 0){
+//         return "Even"
+//     }else{
+//         return "Odd"
+//     }
+// }
 
-console.log(evenOrOdd(10))
-
-
-
-
-for(let i = 0; i <= 15; i++){
-    console.log(i)
-}
-
-count = 0
-
-while(count <=15){
-    console.log(count)
-    count += 1
-}
-
-
-counter = 10
-
-do{
-    console.log("მიყვას ყიყლიყო")
-    counter--
-}while (counter > 0)
-
-
-function greet(name){
-    return `Hello ${name}`
-}
-console.log(greet('Gvanca'))
-
-
-const Greet = (name) =>{
-    return `Hello ${name}`
-}
-
-console.log(greet("Gvanca"))
+// console.log(evenOrOdd(10))
 
 
 
-let personal = {
-    'name': 'Gvanca',
-    'surname': "Mazanishvili"
-}
 
-console.log(personal.name)
+// for(let i = 0; i <= 15; i++){
+//     console.log(i)
+// }
 
+// count = 0
+
+// while(count <=15){
+//     console.log(count)
+//     count += 1
+// }
+
+
+// counter = 10
+
+// do{
+//     console.log("მიყვას ყიყლიყო")
+//     counter--
+// }while (counter > 0)
+
+
+// function greet(name){
+//     return `Hello ${name}`
+// }
+// console.log(greet('Gvanca'))
+
+
+// const Greet = (name) =>{
+//     return `Hello ${name}`
+// }
+
+// console.log(greet("Gvanca"))
+
+
+
+// let personal = {
+//     'name': 'Gvanca',
+//     'surname': "Mazanishvili"
+// }
+
+
+// const upNames = document.getElementsByName("up");
+// console.log(upNames)
+
+
+
+
+
+
+
+
+
+
+
+// 2) შექმენით მასივი სადაც შენახავთ სიტყვებს, თქვენი დავალებაა, რომ გამოიტანოთ მხოლოდ ისეთი სიტყვები რომლის index - იც იყოფა 2 - ზე
+
+
+
+// 3) მომხმარებელს შემოატანინეთ password, დაწერეთ ფუნქცია, რომელიც შეამოწმებს პაროლის სიძლიერეს, თუ პაროლი შეიცავს punctuation character - ს და მოცემული პაროლის სიგრძე მეტია 6 - ზე ან პაროლი შეიცავს რიცხვს გამოიტანეთ message - 'Your password is strong' სხვა შემთხვევაში კი 'Your password is weak' 
+
+// 4) შექმენით მასივი, შეინახეთ მასში სიტყვები, თქვენი დავალებაა, რომ გამოიტანოთ ამ მასივიდან ყველაზე გრძელი სიტყვა (გამოიყენეთ ფუნქცია)
+
+// 5) მომხმარებელს შემოატანინეთ მისი სახელი და გვარი, შექმენით ისეთი ფუნქცია რომელიც სახელის და გვარის პირველ ასოს გამოიტანს მაღალ რეგისტრში, მაგალითად
+
+// const name = 'NIno GVinJiLia' ---> 'Nino Gvinjilia'
+
+// შეგიძლიათ მოიძიოთ ინფორმაცია, იმ მეთოდებზე რომლებიც მოცემული დავალებისთვის გჭირდებათ
+
+// 6) შექმენით რიცხვების მასივი, შემდეგ შექმენით შესაბამისი ფუნქცია იმისათვის, რომ მოცემული რიცხვები დალაგდეს ზრდადობის მიხედვით
+
+// 7) შეასრულეთ codewars - ები
+
+// https://www.codewars.com/kata/55a70521798b14d4750000a4/train/javascript
+// https://www.codewars.com/kata/58daa7617332e59593000006/train/javascript
+
+// BONUS
+// 8) შექმენით ფუნქცია რომელიც არგუმენტად მიიღებს წინადადებას, თქვენმა ფუნქციამ უნდა დაითვალოს წინადადებაში 
+
+
+
+// 2) კომენტარების სახით ახსენით თუ რა არის hoisting, მოიყვანეთ მაგალითებიც, რატომ არის hoisting - ის გამოყენება ცუდი პრაქტიკა
+
+// 3) შეასრულეთ codewars - ები, Js - ით 
+// https://www.codewars.com/kata/52fba66badcd10859f00097e/train/javascript
+// https://www.codewars.com/kata/5a941f4e1a60f6e8a70025fe/train/javascript
+
+
+
+
+// 2) მომხმარებელს შემოატანინეთ messy string მაგალითად '      heLLo WoRld       ', თქვენი დავალებაა, რომ მოცემული string - ს მოაშოროთ ზედმეტი space - ები, და მოცემული სიტყვების პირველი ასოები გამოიტანოთ მაღალ რეგისტრში, მაგალითად '      heLLo WoRld       ' ---->  'Hello World'
+
+// 3) შექმენით ფუნქცია რომელიც წინადადებაში არსებულ სიტყვებს, და მთლიან წინადადებას შემოაბრუნებს მაგალითად - 'Hello My name is Nino' ---> 'oniN si eman yM olleH', გამოიყენეთ შესაბამისი მეთოდები
+
+// 4) შექმენით მასივი სახელად products სადაც შეინახავთ პროდუქტებს, მომხმარებელს შემოატანინეთ პროდუქტის სახელი, შეამოწმეთ თუ მომხმარებლის მიერ შემოტანილი პროდუქტი არის მასივში გამოიტანეთ 'The product is in products array' სხვა შემთხვევაში კი 'The product is not in products array'
+
+// 5) შექმენით ფუნქცია სახელად generateUsername რომელიც არგუმენტად იღებს მომხმარებლის მიერ შემოატნილ username - ს, მოცემული username - ს მოაშორეთ space - ები, შეაერთეთ და ბოლოში 1 - 100 ჩათვლით დაუმატეთ random რიცხვი (გამოიყენეთ Math ბიბლითეკა)
+
+// 6) შექმენით მასივი შენახეთ მასში password - ები, შექმენით ფუნქცია რომელიც გამოიტანს მხოლოდ ისეთ პაროლებს რომლის სიგრძეც მეტია 6 - ზე და მოიცავს რაიმე რიცხვს
+
+// 7) შექმენით მასივი მასში კი რამოდენიმე მასივი, ჩაშენებულ მასივებში კი შეინახეთ სახელები, თქვენი დავალებაა, რომ მოიპოვოთ მთავარ მასივში არსებულ ისეთ მასივზე წვდომა, რომელშიც თქვენი სახელია მოთავსებული, გამოიყენეთ indexing
