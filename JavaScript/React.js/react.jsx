@@ -55,16 +55,16 @@
 // ელმენტების შენახვა ჩვენ შეგვიძლია ცვლადებში, გადავცეთ ფუნქციას, შევინახოთ object-ში, ან მასივში 
 
 // მაგ:
-const navBar = <nav>I am a nav bar</nav>;
+// const navBar = <nav>I am a nav bar</nav>;
 
 
-const myTeam = {
-    center: <li>Benzo Walli</li>,
-    powerForward: <li>Rasha Loa</li>,
-    smallForward: <li>Tayshaun Dasmoto</li>,
-    shootingGuard: <li>Colmar Cumberbatch</li>,
-    pointGuard: <li>Femi Billon</li>
-};
+// const myTeam = {
+//     center: <li>Benzo Walli</li>,
+//     powerForward: <li>Rasha Loa</li>,
+//     smallForward: <li>Tayshaun Dasmoto</li>,
+//     shootingGuard: <li>Colmar Cumberbatch</li>,
+//     pointGuard: <li>Femi Billon</li>
+// };
 
 
 // ელემენტების შექმნისას უნდა დავამთავროთ აუცილებლათ ";" ---> წერტილმძიმით, სხვა შემთხვევაში კი გამოგვიტანს Error-ს
@@ -114,9 +114,161 @@ const myTeam = {
 
 // JSX-ში როდესაც ვიყენებთ ბევრ კოდს და მას ვუტოლებთ რაღაც კონსტანტას, მას აუცილებლად უნდა ჰქონდეს მშობელი ელემნეტი 
 
-const paragraphs = (
-    <div id="i-am-the-outermost-element">
-        <p>I am a paragraph.</p>
-        <p>I, too, am a paragraph.</p>
+// const paragraphs = (
+//     <div id="i-am-the-outermost-element">
+//         <p>I am a paragraph.</p>
+//         <p>I, too, am a paragraph.</p>
+//     </div>
+// );
+
+
+// rendering JSX  - JSX-ის გაშვება ბრაუზერში 
+
+// იმისთვის რომ ბრაუზერში გაეშვას ჩვენი დაწერილი jsx კოდი ამსითვის ჩვენ ვიყენებთ 
+
+// root.render() -- მეთოდს 
+
+// მაგ:
+
+// import React from 'react';
+// import { createRoot } from 'react-dom/client';
+
+// // Write code here:
+// const container  = document.getElementById('container');
+
+// const root = createRoot(container);
+// root.render(<h1>Hello world</h1>);
+
+
+
+// შეგვიძლია root.render() - ში ჩავსვათ ცვლადიც, რომელიც გვინდა რომ გავუშვათ 
+
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+// Virtual DOM 
+
+// Virtual DOM --> ეს აროს html document-ის კოპი რომლის დახმარებითაც უფრო მარტივი ხდება მისი განახლება და თავიდან გაშვება. ვინაიდან ჩოულებრივი DOM-ის მანიპულაცოს დროს browser-ი ერთი შეცვლილი ელემენტის გამო თავიდან აშენებს მთლიან საიტს 
+
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+// class vs className 
+
+// JSX --> ში ჩოულებრივ შეგვიძლია გამოვიყენოთ ატრიბუტები მაგრამ პატარა განსხვავებით. class უკვე არის html-ში ატრიბუტი მაგრამ class js-ში არის რეზერვირებული სახელი ამიტომ html–ის და js-ის class არ არის ერთნაირი. ამიტომაც jsx-ში class ატრიბუტის მაგივრად ვიყენებთ className 
+
+// მაგ: 
+
+{/* <h1 className="big">Title</h1> */}
+
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// Self-closing  Tags
+
+// html-ში ჩვენ გვაქვს empty და container თეგები რომლებიც შედგება "/" დახრილი ხაზით. JSX-ში ჩვენი ელემენტების დაწერისას თუ არ დავწერეთ "/" გამოგვიტანს Error-ს 
+// მაგ:
+
+// const profile = (
+//     <div>
+//     <h1>John Smith</h1>
+//     <img src="images/john.png"/>
+//     <article>
+//         My name is John Smith.
+//         <br/>
+//         am a software developer.
+//         <br/>
+//         I specialize in creating React applications.
+//         </article>
+//     </div>
+// );
+
+
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+// curly braces 
+// ჩვენ შეგვიძლია რომ JSX-ის გამოსახულებები ჩვენ შეგვიძლია ფიგურულ ფრჩილებში. 
+
+// მაგ:
+{/* <h1>2 + 3</h1>  // გაშვებისას გამოვა პირდაპირ  2 + 3 რადგან მას როგორც string-ს ისე მიიღბს  */}
+
+// მაგ:
+{/* <h1>{2 + 3}</h1> --->  გამოიტანს მის მათმატიკურ მოწმედებას "5" */}
+
+
+
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+HOOKS
+
+// clean up function --> გასუფთავების ფუნცია 
+
+import { useEffect, useState } from "react";
+
+function App() {
+    const [count, setCount] = useState(0)
+
+    const handleKeyPress = () => {
+        setCount(count +  1);
+    }
+    useEffect(() => {
+        document.addEventListener('keydown', handleKeyPress);
+        console.log('effect')
+    
+    // clean up function
+    return  () => {
+        document.removeEventListener('keydown',  handleKeyPress);
+        console.log('clean up effect')
+    }
+});
+    return(
+    <div>
+        <p >{count}</p>
     </div>
-);
+    )
+};
+export default App  
+
+
+
+
+
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+// components ---> კონპონენტები
+
+// კომპონენტი არის მრავალჯერად გაამოყენების კოდის ბლოკი რომელიც პასუხისმგებელია მხოლოდ ერთ დავალებაზე. რომ დაარენდეროს jsx ელემენტი ან თავიდან დაარენდეროს მონაცემთა ცვლილება 
+
+
+
+
+// function components 
+
+// მისი დახმარებით ჩვენ შეგვიძლია რომ შევქმანთ ფუნციური კოდი რომელიც აბრუკლებს jsx-ის ელემენტებს 
+
+
+
+// Importing and Exporting React Components 
+

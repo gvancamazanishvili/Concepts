@@ -90,16 +90,6 @@
 // const upNames = document.getElementsByName("up");
 // console.log(upNames)
 
-
-
-
-
-
-
-
-
-
-
 // 2) შექმენით მასივი სადაც შენახავთ სიტყვებს, თქვენი დავალებაა, რომ გამოიტანოთ მხოლოდ ისეთი სიტყვები რომლის index - იც იყოფა 2 - ზე
 
 
@@ -146,3 +136,69 @@
 // 6) შექმენით მასივი შენახეთ მასში password - ები, შექმენით ფუნქცია რომელიც გამოიტანს მხოლოდ ისეთ პაროლებს რომლის სიგრძეც მეტია 6 - ზე და მოიცავს რაიმე რიცხვს
 
 // 7) შექმენით მასივი მასში კი რამოდენიმე მასივი, ჩაშენებულ მასივებში კი შეინახეთ სახელები, თქვენი დავალებაა, რომ მოიპოვოთ მთავარ მასივში არსებულ ისეთ მასივზე წვდომა, რომელშიც თქვენი სახელია მოთავსებული, გამოიყენეთ indexing
+
+
+
+// const person = {
+//     name: "gvance",
+//     surname: "mazanishvili",
+//     age: 16,
+// }
+
+// let me = {
+//     _Name: "Gvanca",
+//     _surname: 'mazanishvili',
+    
+
+//     get name(){
+//         return this._name;
+//     },
+
+//     get surname () {
+//         return this._surname
+//     }
+// }
+
+
+// class Person {
+//     constructor(name, surname){
+//         this.name = name;
+//         this.surname = surname
+//     }
+
+//     get name(){
+//         return this.name
+//     }
+// } 
+// const salome = new Person('salome', 'giorgadze');
+
+
+// const firstPromise = new Promise((resolve, reject)=> {
+//     setTimeout(() => {
+//         reject('i had no money')
+//     }, 2000);
+// });
+
+// console.log(firstPromise)
+
+// firstPromise
+//     .then((result) => console.log(result))
+//     .catch((reason) => console.log('reason is', reason))
+//     .finally(() => console.log("ასინქრონული დუნქცია დასრულდა "))
+
+
+// fetch('https://fakestoreapi.com/products')
+//     .then((res) => res.json())
+//     .then((data) => console.log(data))
+
+
+
+const getData = async () => {
+    try{
+        const res = await fetch('https://fakestoreapi.com/products');
+        const data = await  res.json();
+        console.log(data);
+    } catch(err){
+        console.log(err)
+    }
+}
